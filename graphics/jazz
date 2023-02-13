@@ -1,0 +1,9 @@
+int main(void)
+{
+    if (ac == 3) {
+       char *str = generate_str(av);
+       char **map = doublee(str, atoi(av[1]), atoi(av[1]));
+       find_square(map, atoi(av[1]), atoi(av[1]));
+       affichage;
+    }
+}
