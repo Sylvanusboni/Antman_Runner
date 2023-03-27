@@ -6,7 +6,11 @@
 ##
 
 SRC	=	open_window.c	\
-		build_map.c
+		build_map.c	\
+		write_score.c	\
+		best_score.c	\
+		play_music.c	\
+		my_strlen.c
 
 OBJ	=	$(SRC:.c=.o)
 

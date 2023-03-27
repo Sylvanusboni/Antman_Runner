@@ -11,10 +11,20 @@
     #include <SFML/Graphics.h>
     #include <stdio.h>
     #include <math.h>
+    #include <SFML/Audio.h>
+    #define all_t All_t
 
     typedef struct all {
+        int score;
         int ghost;
+        char *string;
+        char *string2;
+        char *string3;
+        int fd;
         int nb;
+        int nbr;
+        int size;
+        char *str;
         int **tab;
         sfView *view;
         sfVideoMode mode;
@@ -23,10 +33,20 @@
         sfClock *clock;
         sfTime time;
         double seconds;
-        double seconds2; 
+        sfClock *clock2;
+        sfClock *clock3;
+        double seconds2;
+        double seconds3;
+        sfTime time2;
+        sfTime time3;
         sfFont *font;
         sfText *text;
         sfText *text2;
+        sfText *text3;
+        sfText *text4;
+        sfText *text5;
+        sfText *text6;
+        sfText *text7;
         sfTexture *texture;
         sfTexture *texture_X;
         sfTexture *joueur_t;
@@ -37,6 +57,11 @@
         sfSprite *sprite_O;
         sfTexture *texture_M;
         sfSprite *sprite_M;
+        sfTexture *bg_t;
+        sfSprite *bg;
+        sfTexture *end_t;
+        sfSprite *end;
+        sfVector2f end_pos;
         sfIntRect rect;
         sfIntRect rect2;
         sfFloatRect rect_f;
@@ -48,7 +73,12 @@
         sfVector2f position;
         sfVector2f posRel;
         sfVector2f posAbs;
+        sfVector2f bg_pos;
+        sfVector2f sp_pos;
+        sfVector2f tmp_pos;
         char **map;
+        sfMusic *music;
+        sfMusic *music2;
         int gravity;
         int jump;
         double a;
@@ -88,4 +118,16 @@
     typedef struct Ghost {
         ghost_t *first;
     } Ghost_t;
+
+    typedef struct squel {
+        sfTexture *sq_t;
+        sfSprite *sq;
+        sfIntRect sq_rect;
+        sfBool coins;
+        struct squel *next;
+    } squel_t;
+
+    typedef struct Squel {
+        squel_t *first;
+    } Squel_t;
 #endif
